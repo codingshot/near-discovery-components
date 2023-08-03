@@ -17,12 +17,14 @@ const Post = styled.div`
   }
 `;
 
+console.log("Posts.Feed props: ", props);
+
 const renderItem = (a) =>
   a.value.type === "md" && (
     <Post className="post" key={JSON.stringify(a)}>
       <Widget
         src="${REPL_ACCOUNT}/widget/Posts.Post"
-        props={{ accountId: a.accountId, blockHeight: a.blockHeight }}
+        props={{ accountId: a.accountId, blockHeight: a.blockHeight, activityFeed: props.activityFeed ?? false }}
       />
     </Post>
   );

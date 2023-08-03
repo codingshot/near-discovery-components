@@ -140,7 +140,9 @@ return (
         <Widget src="${REPL_ACCOUNT}/widget/LatestComponents" />
       </Section>
       <Section negativeMargin primary active={state.selectedTab === "posts"}>
-        <Widget src="${REPL_QUERYAPI_FEED}" />
+        {/* this part will change */}
+        {/* <Widget src="${REPL_QUERYAPI_FEED}" /> */}
+        <Widget src="${REPL_ACCOUNT}/widget/Posts" props={{ activityFeed: true }} />
       </Section>
       <Section active={state.selectedTab === "explore"}>
         <Widget src="${REPL_ACCOUNT}/widget/ExploreWidgets" />

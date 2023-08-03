@@ -1,6 +1,7 @@
 const accountId = props.accountId || context.accountId;
 const profile = props.profile || Social.get(`${accountId}/profile/**`, "final");
 const profileUrl = `#/${REPL_ACCOUNT}/widget/ProfilePage?accountId=${accountId}`;
+const activityFeed = props.activityFeed ?? false;
 
 const Wrapper = styled.a`
   display: inline-grid;
@@ -117,6 +118,7 @@ return (
       profile,
       children: AccountProfile,
       placement: props.overlayPlacement,
+      activityFeed,
     }}
   />
 );

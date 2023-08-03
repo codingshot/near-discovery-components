@@ -1,4 +1,5 @@
-const { item } = props;
+let { onClick } = props;
+State.init({ hasBeenFlagged: false });
 
 const Button = styled.button`
   border: 0;
@@ -25,7 +26,6 @@ const Button = styled.button`
     color: #11181c;
   }
 `;
-console.log("FlagButton props: ", props);
 
 return (
   <OverlayTrigger
@@ -36,23 +36,7 @@ return (
       type="button"
       aria-label="Flag for moderation"
       disabled={!context.accountId}
-      onClick={() => {
-        Social.set(
-          {
-            index: {
-              flag: JSON.stringify({
-                key: "main",
-                value: item,
-              }),
-            },
-          },
-          {
-            onCommit: () => {
-              props.onFlag && props.onFlag();
-            },
-          }
-        );
-      }}
+      onClick={onClick}
     >
       <i className="bi bi-flag"></i>
     </Button>

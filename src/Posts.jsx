@@ -122,6 +122,8 @@ const FeedWrapper = styled.div`
   }
 `;
 
+console.log("Posts props: ", props);
+
 return (
   <>
     <H2>Posts</H2>
@@ -156,7 +158,7 @@ return (
       )}
 
       <FeedWrapper>
-        <Widget src="${REPL_ACCOUNT}/widget/Posts.Feed" props={{ accounts }} />
+        <Widget src="${REPL_ACCOUNT}/widget/Posts.Feed" props={{ accounts, activityFeed: props.activityFeed ?? false }} />
       </FeedWrapper>
     </Content>
   </>
