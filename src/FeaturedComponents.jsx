@@ -66,6 +66,12 @@ return (
       <Item>
         <Widget
           src="${REPL_ACCOUNT}/widget/ComponentCard"
+          props={{ src: "${REPL_NDC_NOMINATE}/widget/NDC.Nomination.Page" }}
+        />
+      </Item>
+      <Item>
+        <Widget
+          src="${REPL_ACCOUNT}/widget/ComponentCard"
           props={{ src: "let45fc.near/widget/LaserChess3D" }}
         />
       </Item>

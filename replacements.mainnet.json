@@ -5,5 +5,6 @@
     "REPL_MODERATOR": "bosmod.near",
     "REPL_NEAR_URL": "near.org",
     "REPL_NEARWEEK": "nearweekapp.near",
+    "REPL_NDC_NOMINATE": "nomination.ndctools.near",
     "REPL_QUERYAPI_FEED": "dataplatform.near/widget/QueryApi.Feed"
 }
